@@ -1,38 +1,32 @@
 var _ = require('underscore');
+var getters = require('./getters');
 
 var fakeData = {
-
   namesData: require('./data/names.json'),
-  emailsData: require('./data/emails.json'),
+  emailsData: require('./data/emails.json')
+};
 
-  names: function(count) {
-    return _.toArray(_.sample(this.namesData, count));
-  },
+// Define 'names' and 'emails' functions dynamically
+getters(fakeData);
 
-  emails: function(count) {
-    return _.toArray(_.sample(this.emailsData, count));
-  },
+fakeData.obj = function(count, options) {
+  var properties = Object.keys(options);
 
-  obj: function(count, options) {
-    var properties = Object.keys(options);
+  var data = {};
+  properties.forEach(function(item) {
+    data[item] = this[item + "s"](count); // executes either names or emails function
+  }, this); // this is bound to fakeData object
 
-    var data = {};
-    properties.forEach(function(item) {
-      data[item] = this[item + "s"](count); // executes either names or emails function
-    }, this); // this is bound to fakeData object
-
-    var result = [];
-    _.times(count, function(i) {
-      var item = {};
-      Object.keys(data).forEach(function(key) {
-        item[key] = data[key][i];
-      });
-      result.push(item);
+  var result = [];
+  _.times(count, function(i) {
+    var item = {};
+    Object.keys(data).forEach(function(key) {
+      item[key] = data[key][i];
     });
+    result.push(item);
+  });
 
-    return result;
-  }
-
+  return result;
 };
 
 module.exports = fakeData;

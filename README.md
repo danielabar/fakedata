@@ -3,11 +3,20 @@ fakedata
 
 [![Build Status](https://travis-ci.org/danielabar/fakedata.svg?branch=master)](https://travis-ci.org/danielabar/fakedata)
 
-Writing Node Modules with TutsPremium.
+[Writing Node Modules with TutsPremium](https://tutsplus.com/course/writing-node-modules/)
 
 Learning how to write and publish an npm module using TDD with mocha.
 
-Also using npm scripts for development workflow tasks.
+This module generates fake data such as random names and email addresses.
+
+### Setup
+
+  ```
+  gem install travis-lint
+  npm install
+  ```
+
+### Development
 
   ```
   npm run lint
