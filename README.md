@@ -2,6 +2,8 @@ fakedata
 ======
 
 [![Build Status](https://travis-ci.org/danielabar/fakedata.svg?branch=master)](https://travis-ci.org/danielabar/fakedata)
+[![Dependency Status](https://david-dm.org/danielabar/fakedata.svg?theme=shields.io)](https://david-dm.org/danielabar/fakedata)
+[![devDependency Status](https://david-dm.org/danielabar/fakedata/dev-status.svg?theme=shields.io)](https://david-dm.org/danielabar/fakedata#info=devDependencies)
 
 [Writing Node Modules with TutsPremium](https://tutsplus.com/course/writing-node-modules/)
 
