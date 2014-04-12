@@ -13,4 +13,11 @@ describe('fakeData names method', function() {
     assert(name[0] === 'Jack Franklin' || name[0] === 'Jeffrey Way');
   });
 
+  it('gives us back two names if we pass in 2', function() {
+    var name = fakeData.names(2);
+    assert.equal(2, name.length);
+    assert(name[0] === 'Jack Franklin' || name[0] === 'Jeffrey Way');
+    assert(name[1] === 'Jack Franklin' || name[1] === 'Jeffrey Way');
+  });
+
 });

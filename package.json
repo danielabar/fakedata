@@ -4,8 +4,9 @@
   "description": "Generate fake data",
   "main": "index.js",
   "scripts": {
+    "lint": "jshint . --exclude node_modules",
     "test": "mocha -R spec --recursive",
-    "lint": "jshint . --exclude node_modules"
+    "coverage": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- --ui bdd -R spec -t 5000"
   },
   "keywords": [
     "fake",
@@ -19,6 +20,7 @@
   "devDependencies": {
     "mocha": "~1.18.2",
     "proxyquire": "~0.6.0",
-    "jshint": "~2.5.0"
+    "jshint": "~2.5.0",
+    "istanbul": "~0.2.7"
   }
 }
