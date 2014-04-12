@@ -6,11 +6,11 @@ var fakeData = {
   emailsData: require('./data/emails.json'),
 
   names: function(count) {
-    return _.sample(this.namesData, count);
+    return _.toArray(_.sample(this.namesData, count));
   },
 
   emails: function(count) {
-    return _.sample(this.emailsData, count);
+    return _.toArray(_.sample(this.emailsData, count));
   },
 
   obj: function(count, options) {

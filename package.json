@@ -4,9 +4,10 @@
   "description": "Generate fake data",
   "main": "index.js",
   "scripts": {
-    "lint": "jshint . --exclude node_modules",
+    "lint": "jshint .",
     "test": "mocha -R spec --recursive",
-    "coverage": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- --ui bdd -R spec -t 5000"
+    "coverage": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- --ui bdd -R spec -t 5000",
+    "dev": "npm run lint & npm run coverage"
   },
   "keywords": [
     "fake",
