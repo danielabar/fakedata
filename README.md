@@ -1,4 +1,8 @@
-# Fakedata
+fakedata
+======
+
+[![Build Status](https://travis-ci.org/danielabar/fakedata.svg?branch=master)](https://travis-ci.org/danielabar/fakedata)
+
 Writing Node Modules with TutsPremium.
 
 Learning how to write and publish an npm module using TDD with mocha.
