@@ -39,4 +39,20 @@ To see the coverage reports:
   python -m SimpleHTTPServer
   ```
 
-Browse to http://localhost:8000
+Browse to [http://localhost:8000](http://localhost:8000)
+
+### Using Module
+
+To make module available to other projects before it's been published to npm, from root of module development project, run:
+
+  ```
+  npm link
+  ```
+
+This creates a symlink between the development directory, and the global node_modules directory.
+
+Then ```cd``` to root of another project where you'd like to use this module, and run:
+
+  ```npm link fakedata```
+
+This creates a symlink between the node_modules of the project and fakedata in global node_modules, which itself is a symlink as explained above.
