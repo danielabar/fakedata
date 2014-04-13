@@ -8,6 +8,12 @@ var fakeData = proxyquire('../index.js', {
 
 describe('fakeData names method', function() {
 
+  it.skip('defaults to 1 if no count given', function() {
+    var name = fakeData.names();
+    assert.equal(1, name.length, 'should return an array with one item');
+    assert(name[0] === 'Jack Franklin' || name[0] === 'Jeffrey Way');
+  });
+
   it('gives us back one name if we pass in 1', function() {
     var name = fakeData.names(1);
     assert.equal(1, name.length);
